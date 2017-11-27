@@ -17,8 +17,8 @@ TAB = $(patsubst content/%tab.txt, build/%tab.tex, $(SRC))
 build/plot.pdf: plot.py matplotlibrc $(TAB) | build
 	TEXINPUTS="$(call translate,$(pwd):)" python plot.py
 
-build/%tab.tex: src/%tab.txt
-    TEXINPUTS="$(call translate,$(pwd):)" python $< > $@
+build/%tab.tex: content/%tab.txt
+	TEXINPUTS="$(call translate,$(pwd):)" python $< > $@
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 build/main.pdf: build/plot.pdf
