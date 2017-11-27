@@ -4,7 +4,6 @@ import sys
 
 
 data = np.genfromtxt(str(sys.argv[1]), unpack=True)
-
 def columnsettings(a):
     lengthnv = 0
     lnv = 0
@@ -42,15 +41,16 @@ def columnsettings(a):
         if(lengthe > le): le = lengthe
     return "S[table-format=" + str(lnv) + "." + str(lnn-1) + "(" + str(lu) + ")e" + str(le) + "]"
 
-
-print("\\begin{table}")
-print("\t\\centering")
-print("\t\\caption{.}")
-print("\t\\begin{tabular}{", end="")
+out = open("build" + str(sys.argv[1])[7:-3] + "tex", "w")
+out.write("\\begin{table}\n")
+out.write("\\label{tab:" + str(sys.argv[1])[7:-3] + "}\n")
+out.write("\t\\centering\n")
+out.write("\t\\caption{.}\n")
+out.write("\t\\begin{tabular}{")
 for i in data:
-    print(columnsettings(i), end=" ")
-print("}")
-print("\t\t\\toprule")
+    out.write(columnsettings(i) + " ")
+out.write("}\n")
+out.write("\t\t\\toprule\n")
 
 file = open(str(sys.argv[1]), "r")
 kopfzeile = file.readline()
@@ -59,18 +59,18 @@ kopfzeile = [x.strip() for x in kopfzeile.split(',')]
 kopfzeile = [x.strip("#") for x in kopfzeile]
 
 for i in range(len(kopfzeile) -1):
-    print("\t\t{$", kopfzeile[i], "$} & ", end="", sep="")
-print("\t\t{$", kopfzeile[-1], "$} \\\\", sep="")
+    out.write("\t\t{$" + str(kopfzeile[i]) + "$} & ")
+out.write("\t\t{$" + str(kopfzeile[-1]) + "$} \\\\\n")
 
-print("\t\t\\midrule")
+out.write("\t\t\\midrule\n")
 
 for j in range(data[0].size):
-    print("\t\t", end="")
+    out.write("\t\t")
     for i in range(int(round(data.size/data[0].size)) -1):
-        print(data[i][j], "\t& ", end="", sep="")
-    print(data[-1][j], "\t\\\\")
+        out.write(str(data[i][j]) + "\t& ")
+    out.write(str(data[-1][j]) + "\t\\\\\n")
 
-print("\t\t\\bottomrule")
-print("\t\\end{tabular}")
-print("\\end{table}")
+out.write("\t\t\\bottomrule\n")
+out.write("\t\\end{tabular}\n")
+out.write("\\end{table}\n")
 
