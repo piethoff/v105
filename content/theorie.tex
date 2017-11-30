@@ -1,4 +1,55 @@
+\section{Zielsetzung}
+Das magnetische Moment eines Permanentmagneten soll über drei verschiedene Messmethoden bestimmt werden.
+Es soll zudem noch bestimmt werden welche dieser Methoden sich am besten eignet.
 \section{Theorie}
 \label{sec:Theorie}
-
-\cite{sample}
+Die einfachste Form des Magnetismus ist ein makroskopischer Dipol mit geschlossenen Feldlinien.
+Dieser kann von einem Permanentmagneten oder einer Leiterschleife erzeugt werden.
+Für eine Leiterschleife errechnet sich das magnetische Moment mit:
+\begin{equation}
+  \vec{\mu} = I \vec{A}
+\end{equation}
+Das magnetische Moment für einen Permanentmagneten lässt sich nicht ohne weiteres berechnen.
+Befindet sich der Dipol in einem außerem Magnetfeld so wirkt ein Drehmoment,
+\begin{equation}
+  \vec{D} = \vec{\mu}\times \vec{B} ,
+\end{equation}
+auf diesen.
+Der Dipol erhält so lange eine Drehung bis $\vec{\mu}$ und $\vec{B}$ ausgerichtet sind.
+Ein homogenes Magnetfeld wird in Versuchen häufig durch ein Helmholtzspulenpaar erzeugt, da diese Annordnung ein frei zugängliches homogenes Magnetfeld erlaubt.
+Das Magnetfeld des Helmholtzspulenpaares lässt sich unter zu Hilfenahme des Biot-Savart Gesetzes berechnen:
+\begin{equation}
+d \vec{B}= \frac{\mu_0 I}{4 \pi} \frac{d\vec{s}\times \vec{r}}{r^3} .
+\end{equation}
+Damit folgt für einen Stromdurchflossenen Leiter mit einer Windung :
+\begin{equation}
+  \vec{B}=\frac{\mu_0 I}{2} \frac{R^2}{(R^2 + x^2)^3/2 } \cdot x .
+\end{equation}
+Wobei $x$ hier den Abstand zur Symmetrieachse darstellt.
+Das Feld in der Mitte dieser Annordnung berechnet sich, dann durch die Überlagerung der Beiden, von den Spulen ausgehenden Felder.
+Folglich:
+\begin{equation}
+  B(0)= B_1(x)+B_2(-x) = \frac{\mu_0 I R^2}{(R^2+x^2)^3/2}
+\end{equation}
+\subsection{Messung unter Ausnutzung der Gravitation}
+Hier wird ein verschiebares Gewicht, mit Masse $m$, auf eine Aluminiumstange gesteckt.
+Die Gravitationskraft übt ein Drehmoment
+\begin{equation}
+  \vec{D_g} = m \cdot(\vec{r} \times \vec{g})
+\end{equation}
+auf die Billiardkugel aus.
+Das externe Magnetfeld des Helmholtzspulenpaares übt ebenfalls ein Drehmoment
+\begin{equation}
+  \vec{D_B} = \vec{\mu_{Dipol}} \times \vec{B}
+\end{equation}
+auf die Kugel aus.
+Die Kugel befindet sich in einem Gleichgewichtszustand sofern
+\begin{equation}
+   m \cdot(\vec{r} \times \vec{g}) = \vec{\mu_{Dipol}} \times \vec{B}
+\end{equation}
+ gilt.
+ Da $\vec{B}$ und $\vec{g}$ parallel sind fällt die Winkelabhängigkeit weg und $\mu_{Dipol}$ lässt sich mit
+ \begin{equation}
+    m \cdot(\vec{r} \cdot \vec{g}) = \vec{\mu_{Dipol}} \cdot \vec{B}
+ \end{equation}
+ berechnen.
