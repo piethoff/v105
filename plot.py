@@ -37,3 +37,29 @@ plt.plot(x, f(x, *params), "b--", label=r'Regression' )
 plt.tight_layout()
 plt.savefig('schwing.pdf')
 plt.clf()
+
+x, y = np.genfromtxt('content/Messwerte_praes.txt', unpack=True)
+
+plt.plot(x, y, 'rx')
+plt.xlabel(r'$B[\si{tesla}]$')
+plt.ylabel(r'$1/T[\si{1\per\second}]$')
+plt.grid(True, which='both')
+
+
+# Fitvorschrift
+def f(x, A, B):
+    return A*x + B      #jeweilige Fitfunktion auswaehlen:
+
+params, covar = curve_fit(f, x, y)            #eigene Messwerte hier uebergeben
+uparams = unumpy.uarray(params, np.sqrt(np.diag(covar)))
+for i in range(0, len(uparams)):
+    print(chr(ord('A') + i), "=" , uparams[i])
+print()
+
+plt.plot(x, f(x, *params), "b--", label=r'Regression' )
+
+
+
+plt.tight_layout()
+plt.savefig('praes.pdf')
+plt.clf()

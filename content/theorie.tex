@@ -16,7 +16,7 @@ Befindet sich der Dipol in einem äußeren Magnetfeld so wirkt ein Drehmoment,
 \end{equation}
 auf diesen.
 Der Dipol erfährt so lange ein Drehmoment, bis $\symbf{\mu}$ und $\symbf{B}$ parallel sind.
-Ein homogenes Magnetfeld wird in Versuchen häufig durch ein Helmholtzspulenpaar erzeugt, da diese Annordnung ein frei 
+Ein homogenes Magnetfeld wird in Versuchen häufig durch ein Helmholtzspulenpaar erzeugt, da diese Annordnung ein frei
 zugängliches, nahezu homogenes Magnetfeld erlaubt.
 Das Magnetfeld des Helmholtzspulenpaares lässt sich unter zu Hilfenahme des Biot-Savart Gesetzes berechnen:
 \begin{equation}
@@ -27,7 +27,7 @@ Damit folgt für einen Stromdurchflossenen Leiter mit einer Windung:
   \symbf{B}=\frac{\mu_0 I}{2} \frac{R^2}{(R^2 + x^2)^3/2 } \cdot \symbf{e}_x
 \end{equation}
 Wobei $x$ hier den Abstand zur Symmetrieachse darstellt.
-Das Feld in der Mitte dieser Anordnung berechnet sich, dann durch die Überlagerung der beiden von den Spulen ausgehenden 
+Das Feld in der Mitte dieser Anordnung berechnet sich, dann durch die Überlagerung der beiden von den Spulen ausgehenden
 Feldern.
 Folglich:
 \begin{equation}
@@ -58,7 +58,7 @@ Die Kugel befindet sich in einem Gleichgewichtszustand sofern
  berechnen.
 %
 \subsection{Messung mithilfe der Schwingungsdauer}
-Für einen magnetischen Dipol innerhalb eines homogenen Magnetfeldes ergibt sich folgende Bewegungsgleichung in 
+Für einen magnetischen Dipol innerhalb eines homogenen Magnetfeldes ergibt sich folgende Bewegungsgleichung in
 $\theta$-Richtung:
 \begin{align}
     -\lvert\symbf{D}_B\rvert &= J \cdot \frac{\symup{d}^2\theta}{\symup{dt}^2} \notag \\
@@ -66,12 +66,13 @@ $\theta$-Richtung:
 \end{align}
 Für kleine Winkel kann die Differentialgleichung linearisiert werden und es ergibt sich eine Lösung mit
 \begin{equation}
+  \label{eq:schwing}
     T^2 = \frac{4\pi^2J}{\mu_\text{Dipol}}\frac{1}{B}
 \end{equation}
 als Periodendauer der Schwingung.
 %
 \subsection{Messung mithilfe der Präzession}
-Für ein um die Symmetrieachse rotierendes, magnetisches Dipolmoment ergibt sich folgende Differentialgleichung mit 
+Für ein um die Symmetrieachse rotierendes, magnetisches Dipolmoment ergibt sich folgende Differentialgleichung mit
 \mbox{$\symbf{L}=\symbf{J\omega}$} als Drehmoment:
 \begin{equation}
     \symbf{\mu}_\text{Dipol} \times \symbf{B} = \frac{\symup{d}\symbf{L}}{\symup{dt}}
@@ -83,5 +84,6 @@ Eine Lösung besitzt die Präzessionsfrequenz
 \end{equation}
 und somit
 \begin{equation}
+  \label{eq:praes}
     \frac{1}{T_p} = \frac{\mu_\text{Dipol}}{2\pi L}B .
 \end{equation}
