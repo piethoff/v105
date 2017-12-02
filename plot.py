@@ -12,11 +12,11 @@ mpl.rcParams.update({
     'pgf.preamble': r'\usepackage{siunitx}',
 })
 
-x, y = np.genfromtxt('content/Messwerte_schwing.txt', unpack=True)
+x, y = np.genfromtxt('content/messwerte_schwing.txt', unpack=True)
 
 plt.plot(x, y, 'rx')
-plt.xlabel(r'$1/B[\si{1\per\tesla}]$')
-plt.ylabel(r'$T^2[\si{\second\squared}]$')
+plt.xlabel(r'$1/B/\si[per-mode=reciprocal]{\per\tesla}$')
+plt.ylabel(r'$T^2/\si{\second\squared}$')
 plt.grid(True, which='both')
 
 
@@ -35,14 +35,15 @@ plt.plot(x, f(x, *params), "b--", label=r'Regression' )
 
 
 plt.tight_layout()
-plt.savefig('schwing.pdf')
+plt.legend()
+plt.savefig('build/schwing.pdf')
 plt.clf()
 
-x, y = np.genfromtxt('content/Messwerte_praes.txt', unpack=True)
+x, y = np.genfromtxt('content/messwerte_praez.txt', unpack=True)
 
 plt.plot(x, y, 'rx')
-plt.xlabel(r'$B[\si{tesla}]$')
-plt.ylabel(r'$1/T[\si{1\per\second}]$')
+plt.xlabel(r'$B/\si{\tesla}$')
+plt.ylabel(r'$1/T/\si[per-mode=reciprocal]{\per\second}$')
 plt.grid(True, which='both')
 
 
@@ -61,5 +62,6 @@ plt.plot(x, f(x, *params), "b--", label=r'Regression' )
 
 
 plt.tight_layout()
-plt.savefig('praes.pdf')
+plt.legend()
+plt.savefig('build/praez.pdf')
 plt.clf()

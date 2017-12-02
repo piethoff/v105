@@ -39,7 +39,7 @@ def columnsettings(a):
         if(lengthnn > lnn): lnn = lengthnn
         if(lengthu > lu): lu = lengthu
         if(lengthe > le): le = lengthe
-    return "S[table-format=" + str(lnv) + "." + str(lnn-1) + "(" + str(lu) + ")e" + str(le) + "]"
+    return "S[table-format=" + str(lnv) + "." + str(lnn) + "(" + str(lu) + ")e" + str(le) + "]"
 
 out = open("build" + str(sys.argv[1])[7:-3] + "tex", "w")
 out.write("\\begin{table}\n")

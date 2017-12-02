@@ -24,23 +24,23 @@ Das Magnetfeld des Helmholtzspulenpaares lässt sich unter zu Hilfenahme des Bio
 \end{equation}
 Damit folgt für einen Stromdurchflossenen Leiter mit einer Windung:
 \begin{equation}
-  \symbf{B}=\frac{\mu_0 I}{2} \frac{R^2}{(R^2 + x^2)^3/2 } \cdot \symbf{e}_x
+  \symbf{B}=\frac{\mu_0 I}{2} \frac{R^2}{(R^2 + x^2)^{3/2}} \cdot \symbf{e}_x
 \end{equation}
 Wobei $x$ hier den Abstand zur Symmetrieachse darstellt.
 Das Feld in der Mitte dieser Anordnung berechnet sich, dann durch die Überlagerung der beiden von den Spulen ausgehenden
 Feldern.
-Folglich:
+Folglich gilt:
 \begin{equation}
-  B(0)= B_1(x)+B_2(-x) = \frac{\mu_0 I R^2}{(R^2+x^2)^3/2}
+    \label{eq:bfeld}
+    B(0)= B_1(x)+B_2(-x) = \frac{\mu_0 I R^2}{(R^2+x^2)^{3/2}}
 \end{equation}
 %
 \subsection{Messung unter Ausnutzung der Gravitation}
-Hier wird ein verschiebares Gewicht, mit Masse $m$, auf eine Aluminiumstange gesteckt.
-Die Gravitationskraft übt ein Drehmoment
+Durch eine asymmetrische Massenverteilung wirkt als Folge der Gravitation ein Drehmoment
 \begin{equation}
   \symbf{D}_g = m (\symbf{r} \times \symbf{g})
 \end{equation}
-auf die Billiardkugel aus.
+auf die Billiardkugel.
 Das externe Magnetfeld des Helmholtzspulenpaares übt ebenfalls ein Drehmoment
 \begin{equation}
   \symbf{D}_B = \symbf{\mu}_\text{Dipol} \times \symbf{B}
@@ -50,12 +50,13 @@ Die Kugel befindet sich in einem Gleichgewichtszustand sofern
 \begin{equation}
     m (\symbf{r} \times \symbf{g}) = \symbf{\mu}_\text{Dipol} \times \symbf{B}
 \end{equation}
- gilt.
- Da $\symbf{B}$ und $\symbf{g}$ parallel sind, fällt die Winkelabhängigkeit weg und $\mu_{Dipol}$ lässt sich mit
- \begin{equation}
-   mgr = B\mu_\text{Dipol}
- \end{equation}
- berechnen.
+gilt.
+Da $\symbf{B}$ und $\symbf{g}$ parallel sind, entfällt die Winkelabhängigkeit und $\mu_\text{Dipol}$ lässt sich mit
+\begin{equation}
+    \label{eq:grav_dip}
+    mgr = B\mu_\text{Dipol}
+\end{equation}
+berechnen.
 %
 \subsection{Messung mithilfe der Schwingungsdauer}
 Für einen magnetischen Dipol innerhalb eines homogenen Magnetfeldes ergibt sich folgende Bewegungsgleichung in
@@ -84,6 +85,6 @@ Eine Lösung besitzt die Präzessionsfrequenz
 \end{equation}
 und somit
 \begin{equation}
-  \label{eq:praes}
+  \label{eq:praez}
     \frac{1}{T_p} = \frac{\mu_\text{Dipol}}{2\pi L}B .
 \end{equation}
