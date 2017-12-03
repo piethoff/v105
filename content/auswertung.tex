@@ -66,7 +66,7 @@ Durch dieses Werte wird eine Gerade mittels linearer Regression aufgetragen.
 \noindent Daraus folgt eine Steigung von $m=(\SI{2.51 \pm 12}{\second\squared\tesla})\num{e-3}$ für die lineare Ausgleichsgerade.
 Das magnetische Moment lässt sich dann nach Formel \eqref{eq:schwing} berechnen:
 \begin{equation}
-  \mu_\text{Dipol}= \frac{\pi^2 \cdot J}{m}=\SI{0.59 \pm 999}{\ampere\meter\squared}
+  \mu_\text{Dipol}= \frac{\pi^2 \cdot J}{m}=\SI{0.59 \pm 0.00021}{\ampere\meter\squared}
 \end{equation}
 %
 \subsection{Bestimmung des magnetischen Moments über Präzession}
@@ -106,4 +106,28 @@ Damit lässt sich das magnetische Moment nach Gleichung \eqref{eq:praez} berechn
 \begin{equation}
      \mu_\text{Dipol}=m\cdot 2\pi \cdot L .
 \end{equation}
-
+\begin{table}[H]
+    \centering
+    \caption{Drehimpulse und Dipolmomente}
+    \label{tab:dipolp}
+    \begin{tabular}{S[table-format=1.2] S[table-format=2.2(3)]}
+        \toprule
+        {$L/\SI{e-3}{\kilogram\meter\squared\per\second}$} & {$\mu_{Dipol}/\si{\ampere\meter\squared}$} \\
+        \midrule
+        1.78   & 0.441   \\
+        1.93   & 0.478  \\
+        1.69   & 0.419   \\
+        1.67   & 0.414  \\
+        1.71   & 0.424  \\
+        1.77   & 0.439  \\
+        1.63   & 0.404  \\
+        1.88   & 0.466  \\
+        1.69   & 0.419  \\
+        1.76   & 0.437  \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+Daraus ergibt sich im Mittel folgendes Dipolmomnt:
+\begin{equation*}
+  \bar{\mu_{Dipol}}= 0.4341 \si{\ampere\meter\squared} .
+\end{equation*}
