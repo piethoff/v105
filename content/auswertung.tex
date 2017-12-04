@@ -1,12 +1,12 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Messung des magnetischen Dipols mithilfe der Gravitation}
-Die durch die Messung erhaltenen Werte sind in der Tabelle\ref{tab:gravtab} aufgetragen.
+Die durch die Messung erhaltenen Werte sind in der Tabelle \ref{tab:gravtab} aufgetragen.
 %
 \begin{table}[H]
-\label{tab:gravtab}
     \centering
-    \caption{Messungen des Graviatationsaufbaus.}
+    \caption{Messwerte des Gravitationsaufbaus.}
+    \label{tab:gravtab}
     \begin{tabular}{S[table-format=2.1(0)e0] S[table-format=1.2(0)e0] S[table-format=1.3(0)e0] }
         \toprule
         {$r/\si{\centi\meter}$} & {$I/\si{\ampere}$} & {$B/\SI{e-3}{Tesla}$} \\
@@ -24,38 +24,37 @@ Die durch die Messung erhaltenen Werte sind in der Tabelle\ref{tab:gravtab} aufg
         \bottomrule
     \end{tabular}
 \end{table}
-In der Abbildung \ref{fig:grav} sind die Messwerte aufgetragen und eine lineare Ausgleichsgerade ist durch diese gezogen.
+\noindent In der Abbildung \ref{fig:grav} sind die Messwerte aufgetragen und eine lineare Ausgleichsgerade ist durch diese gezogen.
 \begin{figure}[H]
   \centering
   \includegraphics{build/praez.pdf}
-  \caption{Abstand der Gewichte aufgetragen gegen B-Feld}
+  \caption{Abstand des Gewichts aufgetragen gegen das $\symbf{B}$-Feld}
   \label{fig:grav}
 \end{figure}
-Damit folgt eine Steigung von $m=0.0312\pm 0.005\si{\tesla\per\meter}$.
+\noindent Damit folgt eine Steigung von $m=\SI[per-mode=reciprocal]{0.0312\pm 0.005}{\tesla\per\meter}$.
 \noindent Das magnetische Dipolmoment lässt sich nach Gleichung \eqref{eq:grav_dip} bestimmen:
-\begin{equation*}
-  \mu_\text{Dipol}=\frac{m_g \cdot g}{m} .
-\end{equation*}
+\begin{equation}
+  \mu_\text{Dipol}=\frac{m_g g}{m}
+\end{equation}
 Es resultiert ein Wert von
 \begin{equation*}
 \mu_\text{Dipol} = \SI{0.440\pm0.071}{\ampere\meter\squared}
 \end{equation*}
 für das magnetische Dipolmoment.
 Der Fehler wurde hier nach der Gaußschen Fehlerfortpflanzung berechnet:
-\begin{equation*}
-  \symup{\Delta} \mu_{Dipol} = \sqrt{(\symup{\Delta} m\frac{m_g \cdot g}{m^2})^2}
-\end{equation*}
-
+\begin{equation}
+  \symup{\Delta} \mu_\text{Dipol} = \sqrt{\left(\symup{\Delta} m\frac{m_g g}{m^2}\right)^2}
+\end{equation}
 %
-\subsection{Bestimmung des magnetischen Moments die Schwingungsdauer}
+\subsection{Bestimmung des magnetischen Moments über die Schwingungsdauer}
 Die für die Messung erhaltenen Werte befinden sich in Tabelle \ref{tab:schwing}.
 \begin{table}[H]
     \centering
-    \caption{Messwerte der Schwingung}
+    \caption{Messwerte der Schwingung.}
     \label{tab:schwing}
     \begin{tabular}{S[table-format=1.2(0)e0] S[table-format=2.2(0)e0] S[table-format=4.3(0)e0] S[table-format=1.3(0)e0] }
         \toprule
-        {$I/\si{\ampere}$} & {$T/\SI{e-1}{\second}$} & {$\frac{1}{B}/\si[per-mode=reciprocal]{\per\tesla}$} & {$T^2/\si{\second\squared}$}\\
+        {$I/\si{\ampere}$} & {$T/\SI{e-1}{\second}$} & {$B^{-1}/\si[per-mode=reciprocal]{\per\tesla}$} & {$T^2/\si{\second\squared}$}\\
         \midrule
         0.50   & 19.84  & 1481.481  & 3.936\\
         1.00   & 14.68  &  740.741  & 2.155\\
@@ -81,30 +80,31 @@ Durch dieses Werte wird eine Gerade mittels linearer Regression aufgetragen.
 \noindent Daraus folgt eine Steigung von $m=\SI{2.51 \pm 0.12e-3}{\second\squared\tesla}$ für die lineare Ausgleichsgerade.
 Das magnetische Moment lässt sich dann nach Formel \eqref{eq:schwing}, mit einem Trägheitsmoment von,
 \begin{equation*}
-  J = \frac{2}{5} \cdot m_k r_k ^2 =\SI{4.07e-5}{\kg\meter\squared}
+  J = \frac{2}{5} M r^2 =\SI{4.07e-5}{\kg\meter\squared}
 \end{equation*}
 berechnen:
 \begin{equation}
-  \mu_\text{Dipol}= \frac{4\cdot \pi^2 \cdot J}{m}=\SI{0.64 \pm 0.304}{\ampere\meter\squared}
+  \mu_\text{Dipol}= \frac{4\pi^2 \cdot J}{m}=\SI{0.64 \pm 0.304}{\ampere\meter\squared}
 \end{equation}
 Der Fehler wurde hier mit der Gaußschen Fortpflanzung nach
-\begin{equation*}
-  \symup{\Delta} \mu_{Dipol} = \sqrt{(\symup{\Delta} m\frac{4 \pi^2 J}{m^2})^2}
-\end{equation*}
+\begin{equation}
+  \symup{\Delta} \mu_\text{Dipol} = \sqrt{\left(\symup{\Delta} m\frac{4 \pi^2 J}{m^2}\right)^2}
+\end{equation}
+berechnet.
 %
 \subsection{Bestimmung des magnetischen Moments über Präzession}
 Da es schwierig ist eine konstante Frequenz einzustellen sind die für die Messung angegebenen Werte gemittelt.
 Diese Werte befinden sich in Tabelle \ref{tab:praez}. Die Abweichungen wurden hier über die Streuung des Mittelwertes berechnet.
-\begin{equation*}
-  \symup{\Delta} T = \sqrt{\frac{1}{N(N-1)}\sum_{i=1}^{N}(T_i-\bar{T})^2}
-\end{equation*}
-\begin{equation*}
-  \symup{\Delta} \nu = \sqrt{\frac{1}{N(N-1)}\sum_{i=1}^{N}(\nu_i-\bar{\nu})^2}
-\end{equation*}
+\begin{equation}
+  \symup{\Delta} T = \sqrt{\frac{1}{N(N-1)}\sum_{i=1}^{N}\left(T_i-\bar{T}\right)^2}
+\end{equation}
+\begin{equation}
+  \symup{\Delta} \nu = \sqrt{\frac{1}{N(N-1)}\sum_{i=1}^{N}\left(\nu_i-\bar{\nu}\right)^2}
+\end{equation}
 
 \begin{table}
     \centering
-    \caption{Messwerte der Präzession}
+    \caption{Messwerte der Präzession.}
     \label{tab:praez}
     \begin{tabular}{S[table-format=1.2] S[table-format=2.2(3)] S[table-format=1.2(3)]}
         \toprule
@@ -123,7 +123,7 @@ Diese Werte befinden sich in Tabelle \ref{tab:praez}. Die Abweichungen wurden hi
         \bottomrule
     \end{tabular}
 \end{table}
-\noindent In der Abbildung \ref{fig:praez} wurde die reziproke Periodendauer gegen die Magnetfeldstärke aufgetragen.
+\noindent In der Abbildung \ref{fig:praez} wurde die inverse Periodendauer gegen die Magnetfeldstärke aufgetragen.
 Zusätzlich wurde eine Regressionsgerade aufgetragen.
 \begin{figure}[H]
   \centering
@@ -134,22 +134,22 @@ Zusätzlich wurde eine Regressionsgerade aufgetragen.
 \noindent Für die Steigung der Geraden ergibt sich ein Wert von $m=\SI[per-mode=reciprocal]{39.5\pm1.7}{\per\second\per\tesla}$.
 Damit lässt sich das magnetische Moment nach Gleichung \eqref{eq:praez} berechnen:
 \begin{equation}
-     \mu_\text{Dipol}=m\cdot 2\pi \cdot L .
+     \mu_\text{Dipol}= 2\pi m L 
 \end{equation}
-Die Abweichungen der Werte wurden hier mit der Gaußschefehlerfortpflanzung berechnet:
-\begin{equation*}
+Die Abweichungen der Werte wurden hier mit der Gaußschen Fehlerfortpflanzung berechnet:
+\begin{equation}
   \symup{\Delta} L = \sqrt{(\symup{\Delta}\nu 2 \pi J)^2 }
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}
 \symup{\Delta} \mu_\text{Dipol} = \sqrt{(\symup{\Delta} L 2 \pi m)^2 + (\symup{\Delta} m 2\pi L)^2 }
-\end{equation*}
+\end{equation}
 \begin{table}[H]
     \centering
-    \caption{Drehimpulse und Dipolmomente}
+    \caption{Drehimpulse und Dipolmomente.}
     \label{tab:dipolp}
     \begin{tabular}{S[table-format=1.2(3)] S[table-format=1.3(3)]}
         \toprule
-        {$L/\SI{e-3}{\kilogram\meter\squared\per\second}$} & {$\mu_{Dipol}/\si{\ampere\meter\squared}$} \\
+        {$L/\SI{e-3}{\kilogram\meter\squared\per\second}$} & {$\mu_\text{Dipol}/\si{\ampere\meter\squared}$} \\
         \midrule
         1.78\pm 0.04   & 0.441\pm 0.022\\
         1.93\pm 0.09   & 0.478\pm 0.031\\
@@ -164,7 +164,7 @@ Die Abweichungen der Werte wurden hier mit der Gaußschefehlerfortpflanzung bere
         \bottomrule
     \end{tabular}
 \end{table}
-Daraus ergibt sich im Mittel folgendes Dipolmomnt:
+Daraus ergibt sich im Mittel folgendes Dipolmoment:
 \begin{equation*}
-  \bar{\mu}_{Dipol}= 0.4341\pm 0.0291 \si{\ampere\meter\squared} .
+  {\mu}_\text{Dipol}= \SI{0.4341\pm 0.0291}{\ampere\meter\squared}
 \end{equation*}

@@ -14,8 +14,7 @@ mpl.rcParams.update({
 
 x, y = np.genfromtxt('content/messwerte_schwing.txt', unpack=True)
 
-plt.plot(x, y, 'rx')
-plt.xlabel(r'$1/B/\si[per-mode=reciprocal]{\per\tesla}$')
+plt.xlabel(r'$B^{-1}/\si[per-mode=reciprocal]{\per\tesla}$')
 plt.ylabel(r'$T^2/\si{\second\squared}$')
 plt.grid(True, which='both')
 
@@ -30,7 +29,8 @@ for i in range(0, len(uparams)):
     print(chr(ord('A') + i), "=" , uparams[i])
 print()
 
-plt.plot(x, f(x, *params), "b--", label=r'Regression' )
+plt.plot(x, f(x, *params), "xkcd:orange", label=r'Regression' )
+plt.plot(x, y, ".", color="xkcd:blue", label="Messwerte")
 
 
 
@@ -41,9 +41,8 @@ plt.clf()
 
 x, y = np.genfromtxt('content/messwerte_praez.txt', unpack=True)
 
-plt.plot(x, y, 'rx')
 plt.xlabel(r'$B/\si{\tesla}$')
-plt.ylabel(r'$1/T/\si[per-mode=reciprocal]{\per\second}$')
+plt.ylabel(r'$T^{-1}/\si[per-mode=reciprocal]{\per\second}$')
 plt.grid(True, which='both')
 
 
@@ -57,7 +56,8 @@ for i in range(0, len(uparams)):
     print(chr(ord('A') + i), "=" , uparams[i])
 print()
 
-plt.plot(x, f(x, *params), "b--", label=r'Regression' )
+plt.plot(x, f(x, *params), "xkcd:orange", label=r'Regression' )
+plt.plot(x, y, ".", color="xkcd:blue", label="Messwerte")
 
 
 
@@ -70,9 +70,6 @@ x, y = np.genfromtxt('content/messwerte_grav.txt', unpack=True)
 
 x /=100
 y *= 0.00136
-print(x)
-print(y)
-plt.plot(x, y, 'rx')
 plt.xlabel(r'$r/\si[per-mode=reciprocal]{\meter}$')
 plt.ylabel(r'$B/\si{\tesla}$')
 plt.grid(True, which='both')
@@ -88,7 +85,8 @@ for i in range(0, len(uparams)):
     print(chr(ord('A') + i), "=" , uparams[i])
 print()
 
-plt.plot(x, f(x, *params), "b--", label=r'Regression' )
+plt.plot(x, f(x, *params), "xkcd:orange", label=r'Regression' )
+plt.plot(x, y, ".", color="xkcd:blue", label="Messwerte")
 
 
 
