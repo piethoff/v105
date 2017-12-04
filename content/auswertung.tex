@@ -1,12 +1,7 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Messung des magnetischen Dipols mithilfe der Gravitation}
-Mithilfe der Formel \eqref{eq:grav_dip} und \eqref{eq:bfeld} erhält man folgende, nurnoch von den Messgrößen abhängige, Formel:
-\begin{equation}
-    \mu_\text{Dipol} = \frac{r}{I}\frac{mg\left(R^2+x^2\right)^{3/2}}{N\mu_0R^2}
-\end{equation}
-Wobei gilt $x=\SI{6.9}{\centi\meter}$, $R=\SI{10.9}{\centi\meter}$, $m=\SI{1.4}{\gram}$ und $N=\num{195}$.
-Es folgen die gemessenen Werte zusammen mit dem jeweilig entsprechenen Dipolmoment:
+Die durch die Messung erhaltenen Werte sind in der Tabelle\ref{tab:gravtab} aufgetragen.
 %
 \begin{table}[H]
 \label{tab:gravtab}
@@ -14,18 +9,18 @@ Es folgen die gemessenen Werte zusammen mit dem jeweilig entsprechenen Dipolmome
     \caption{Messungen des Graviatationsaufbaus.}
     \begin{tabular}{S[table-format=2.1(0)e0] S[table-format=1.2(0)e0] S[table-format=1.3(0)e0] }
         \toprule
-        {$r/\si{\centi\meter}$} & {$I/\si{\ampere}$} & {$\mu_\text{Dipol}/\si{\ampere\meter\squared}$} \\
+        {$r/\si{\centi\meter}$} & {$I/\si{\ampere}$} & {$B/\SI{e-3}{Tesla}$} \\
         \midrule
-        6.0     & 1.7   & 0.357    \\
-        6.5     & 1.8   & 0.366    \\
-        7.0     & 1.95  & 0.364    \\
-        7.5     & 2.05  & 0.371    \\
-        8.0     & 2.15  & 0.377    \\
-        8.5     & 2.25  & 0.383    \\
-        9.0     & 2.4   & 0.380    \\
-        9.5     & 2.5   & 0.385    \\
-        10.0    & 2.6   & 0.390    \\
-        10.5    & 2.75  & 0.387    \\
+        6.0     & 1.7   & 2.312    \\
+        6.5     & 1.8   & 2.448    \\
+        7.0     & 1.95  & 2.652    \\
+        7.5     & 2.05  & 2.788    \\
+        8.0     & 2.15  & 2.924    \\
+        8.5     & 2.25  & 3.060    \\
+        9.0     & 2.4   & 3.264    \\
+        9.5     & 2.5   & 3.400    \\
+        10.0    & 2.6   & 3.536    \\
+        10.5    & 2.75  & 3.740    \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -33,13 +28,17 @@ In der Abbildung \ref{fig:grav} sind die Messwerte aufgetragen und eine lineare 
 \begin{figure}[H]
   \centering
   \includegraphics{build/praez.pdf}
-  \caption{.}
+  \caption{Abstand der Gewichte aufgetragen gegen B-Feld}
   \label{fig:grav}
 \end{figure}
-Damit folgt eine Steigung von $m=0.0312\pm 0.005\si{\tesla\per\meter}$
-\noindent Es resultiert ein Wert von
+Damit folgt eine Steigung von $m=0.0312\pm 0.005\si{\tesla\per\meter}$.
+\noindent Das magnetische Dipolmoment lässt sich nach Gleichung \eqref{eq:grav_dip} bestimmen:
 \begin{equation*}
-\mu_\text{Dipol} = \SI{0.447\pm0.018}{\ampere\meter\squared}
+  \mu_\text{Dipol}=\frac{m_g \cdot g}{m} .
+\end{equation*}
+Es resultiert ein Wert von
+\begin{equation*}
+\mu_\text{Dipol} = \SI{0.440\pm0.071}{\ampere\meter\squared}
 \end{equation*}
 für das magnetische Dipolmoment.
 Der Fehler wurde hier nach der Gaußschen Fehlerfortpflanzung berechnet:
@@ -80,7 +79,11 @@ Durch dieses Werte wird eine Gerade mittels linearer Regression aufgetragen.
   \label{fig:schwing}
 \end{figure}
 \noindent Daraus folgt eine Steigung von $m=\SI{2.51 \pm 0.12e-3}{\second\squared\tesla}$ für die lineare Ausgleichsgerade.
-Das magnetische Moment lässt sich dann nach Formel \eqref{eq:schwing} berechnen:
+Das magnetische Moment lässt sich dann nach Formel \eqref{eq:schwing}, mit einem Trägheitsmoment von,
+\begin{equation*}
+  J = \frac{2}{5} \cdot m_k r_k ^2 =\SI{4.07e-5}{\kg\meter\squared}
+\end{equation*}
+berechnen:
 \begin{equation}
   \mu_\text{Dipol}= \frac{4\cdot \pi^2 \cdot J}{m}=\SI{0.64 \pm 0.304}{\ampere\meter\squared}
 \end{equation}
