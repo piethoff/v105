@@ -65,3 +65,34 @@ plt.tight_layout()
 plt.legend()
 plt.savefig('build/praez.pdf')
 plt.clf()
+
+x, y = np.genfromtxt('content/messwerte_grav.txt', unpack=True)
+
+x /=100
+y *= 0.00136
+print(x)
+print(y)
+plt.plot(x, y, 'rx')
+plt.xlabel(r'$r/\si[per-mode=reciprocal]{\meter}$')
+plt.ylabel(r'$B/\si{\tesla}$')
+plt.grid(True, which='both')
+
+
+# Fitvorschrift
+def f(x, A, B):
+    return A*x + B      #jeweilige Fitfunktion auswaehlen:
+
+params, covar = curve_fit(f, x, y)            #eigene Messwerte hier uebergeben
+uparams = unumpy.uarray(params, np.sqrt(np.diag(covar)))
+for i in range(0, len(uparams)):
+    print(chr(ord('A') + i), "=" , uparams[i])
+print()
+
+plt.plot(x, f(x, *params), "b--", label=r'Regression' )
+
+
+
+plt.tight_layout()
+plt.legend()
+plt.savefig('build/grav.pdf')
+plt.clf()
