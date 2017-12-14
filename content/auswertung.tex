@@ -27,11 +27,12 @@ Die durch die Messung erhaltenen Werte sind in der Tabelle \ref{tab:gravtab} auf
 \noindent In der Abbildung \ref{fig:grav} sind die Messwerte aufgetragen und eine lineare Ausgleichsgerade ist durch diese gezogen.
 \begin{figure}[H]
   \centering
-  \includegraphics{build/praez.pdf}
-  \caption{Abstand des Gewichts aufgetragen gegen das $\symbf{B}$-Feld}
+  \includegraphics{build/grav.pdf}
+  \caption{Abstand des Gewichts aufgetragen gegen das $\symbf{B}$-Feld.}
   \label{fig:grav}
 \end{figure}
-\noindent Damit folgt eine Steigung von $m=\SI[per-mode=reciprocal]{0.0312\pm 0.005}{\tesla\per\meter}$.
+\noindent Die Ausgleichsgerade wurde mit Python/SciPy nach der Funktion $f(x)=mx+b$ erstellt.
+\noindent Damit folgt eine Steigung von $m=\SI[per-mode=reciprocal]{0.0312\pm 0.005}{\tesla\per\meter}$ und einen $y$-Achsenabschnitt von $b=\SI{0.44\pm 0.04e-3}{\meter}$.
 \noindent Das magnetische Dipolmoment lässt sich nach Gleichung \eqref{eq:grav_dip} bestimmen:
 \begin{equation}
   \mu_\text{Dipol}=\frac{m_g g}{m}
@@ -74,10 +75,11 @@ Durch dieses Werte wird eine Gerade mittels linearer Regression aufgetragen.
 \begin{figure}[H]
   \centering
   \includegraphics{build/schwing.pdf}
-  \caption{.}
+  \caption{$T^2$ aufgetragen gegen $1/B$.}
   \label{fig:schwing}
 \end{figure}
-\noindent Daraus folgt eine Steigung von $m=\SI{2.51 \pm 0.12e-3}{\second\squared\tesla}$ für die lineare Ausgleichsgerade.
+\noindent Die Ausgleichsgerade wurde mit Python/SciPy nach der Funktion $f(x)=mx+b$ erstellt.
+\noindent Daraus folgt eine Steigung von $m=\SI{2.51 \pm 0.12e-3}{\second\squared\tesla}$ für die lineare Ausgleichsgerade und einen $y$-Achsenabschnitt von $b=\SI{0.32\pm0.08}{\per\second}$.
 Das magnetische Moment lässt sich dann nach Formel \eqref{eq:schwing}, mit einem Trägheitsmoment von,
 \begin{equation*}
   J = \frac{2}{5} M r^2 =\SI{4.07e-5}{\kg\meter\squared}
@@ -128,13 +130,14 @@ Zusätzlich wurde eine Regressionsgerade aufgetragen.
 \begin{figure}[H]
   \centering
   \includegraphics{build/praez.pdf}
-  \caption{.}
+  \caption{$B$ aufgetragen gegen $1/T$.}
   \label{fig:praez}
 \end{figure}
-\noindent Für die Steigung der Geraden ergibt sich ein Wert von $m=\SI[per-mode=reciprocal]{39.5\pm1.7}{\per\second\per\tesla}$.
+\noindent Die Ausgleichsgerade wurde mit Python/SciPy nach der Funktion $f(x)=mx+b$ erstellt.
+\noindent Für die Steigung der Geraden ergibt sich ein Wert von $m=\SI[per-mode=reciprocal]{39.5\pm1.7}{\per\second\per\tesla}$ und einen $y$-Achsenabschnitt von $b=\SI{0.007\pm0.006}{\second\squared}$.
 Damit lässt sich das magnetische Moment nach Gleichung \eqref{eq:praez} berechnen:
 \begin{equation}
-     \mu_\text{Dipol}= 2\pi m L 
+     \mu_\text{Dipol}= 2\pi m L
 \end{equation}
 Die Abweichungen der Werte wurden hier mit der Gaußschen Fehlerfortpflanzung berechnet:
 \begin{equation}
@@ -166,5 +169,5 @@ Die Abweichungen der Werte wurden hier mit der Gaußschen Fehlerfortpflanzung be
 \end{table}
 Daraus ergibt sich im Mittel folgendes Dipolmoment:
 \begin{equation*}
-  {\mu}_\text{Dipol}= \SI{0.4341\pm 0.0291}{\ampere\meter\squared}
+  {\mu}_\text{Dipol}= \SI{0.434\pm 0.029}{\ampere\meter\squared}
 \end{equation*}
